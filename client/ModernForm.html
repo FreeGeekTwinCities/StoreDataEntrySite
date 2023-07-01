@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Form Input</title>
+        <link rel="stylesheet" type="text/css" href="Stylesheet.css">
+        <script src="FormValidate.js" defer></script>
+    </head>
+    <body>
+        <div class="container">
+        <form id="ModernBuildForm" method="POST">
+            
+            <p>
+                <label for="BuilderName">
+                    Builder Name: 
+                </label>
+                <br>
+                Please enter your name so we can keep track of who has submitted what.
+            </p><p>
+                <input id="BuilderName" name="BuilderName">
+            </p>
+
+            <p>
+                <label for="SuggestedPrice">
+                    Suggested Price: 
+                </label>
+                <br>
+                If this device has a certain price you think should be applied to it, please enter it here! This is not required and should only be used for high end devices or Apple devices. Entering a price here does not guarantee it will be sold at that price.
+            </p><p>
+                <input id="SuggestedPrice" name="SuggestedPrice">
+            </p>
+
+            <p>
+                <label for="DeviceType">
+                    Device Type:  
+                </label>
+                <br>
+                Desktop covers all devices other than Laptops, including NUCs, All-in-Ones, Small Form Factor PCs, etc. Server should only be used for rack-mountable units
+            </p><p>
+                <select id="DeviceType" name="DeviceType" required>
+                    <option value="Desktop">Desktop</option>
+                    <option value="Laptop">Laptop</option>
+                    <option value="All-in-One">All-in-One</option>
+                    <option value="Chromebook">Chromebook</option>
+                    <option value="Server">Server</option>
+                </select>
+            </p>
+            
+            <p>
+                <label for="Condition">
+                    Condition: 
+                </label>
+                <br>
+                Use your best judgement in determining condition. Most computers are in "Great Condition" but if they have more than a couple scratches or scrapes, or if they have cracks in the body at all, place them under "Good Condition." "OK Condition" is reserved for computers with major scratches or major body damage. This will be used to evaluate price, so it's very important we be accurate!
+            </p><p>
+                <select id="Condition" name="Condition" required>
+                    <option value="Great">Great condition</option>
+                    <option value="Good">Good condition</option>
+                    <option value="OK">OK condition</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="Notes">
+                    Notes: 
+                </label>
+                <br>
+                Leave blank unless you have notes on condition or functionality. If a device is in OK condition, details MUST be noted here. If a device is in Good condition, details are appreciated but not always needed. PLEASE MAKE SURE YOUR DEVICE IS CLEANED BEFORE DROPPING IT OFF WITH THE STORE!!!
+            </p><p>
+                <input type="text" id="Notes" name="Notes">
+            </p>
+
+            <p>
+                <label for="Manufacturer">
+                    Manufacturer: 
+                </label>
+                <br>
+                If it is a custom PC (non-OEM) please enter "Custom" with no quotes!
+            </p><p>
+                <input type="text" id="Manufacturer" name="Manufacturer">
+            </p>
+
+            <p>
+                <label for="ModelNum">
+                    Model Number: 
+                </label>
+                <br>
+                If it is a Custom PC (non-OEM,) please enter the Motherboard Model Number! Do your best to find this model number, and if not, enter in "Generic *Manufacturer Name Here* Motherboard" For Apple devices, enter in the most accurate model number available, either something like "Macbook Pro 9,2" or "Macbook Pro A1278."
+            </p><p>
+                <input type="text" id="ModelNum" name="ModelNum">
+            </p>
+
+            <p>
+                <label for="ScreenSize">
+                    Screen Size: 
+                </label>
+                <br>
+                Please leave blank if there is no screen.
+            </p><p>
+                <input id="ScreenSize" name="ScreenSize">
+            </p>
+
+            <p>
+                <label for="ScreenRes">
+                    Screen Resolution: 
+                </label>
+                <br>
+                Please leave blank if there is no screen. 
+            </p><p>
+                <input id="ScreenRes" name="ScreenRes">
+            </p>
+
+            <p>
+                <label for="CPU">
+                    CPU Model:
+                </label>
+                <br>
+                Please enter the full model number of the CPU as it appears on the build sheet
+            </p><p>
+                <input id="CPU" name="CPU">
+            </p>
+
+            <p>
+                <label for="GPU">
+                    GPU Model:  
+                </label>
+                <br>
+                Please leave blank if there is no discrete GPU.  Please enter the full model number of the GPU as it appears on the build sheet.
+            </p><p>
+                <input id="GPU" name="GPU">
+            </p>
+
+            <p>
+                <label for="RAM">
+                    RAM: 
+                </label>
+                <br>
+                Please enter a whole number!  The form assumes GB as a unit.
+            </p><p>
+                <input type="number" id="RAM" name="RAM">
+            </p>
+
+            <p>
+                <label for="Storage">
+                    Storage: 
+                </label>
+                <br>
+                Please enter with the best possible description of the drive. Format as: "1TB HDD" or "120GB SSD". If it has multiple drives, format as "120GB SSD; 1TB HDD." If it's configured for RAID, please include a description of the RAID setup, i.e. "12TB Total; 3x4TB in RAID 0."
+            </p><p>
+                <input id="Storage" name="Storage">
+            </p>
+
+            <p>
+                <label for="WinSerial">
+                    Windows 10 Serial Number (NOT THE PRODUCT KEY) :
+                </label>
+                <br>
+                If this is a Windows 10 system, please submit the Windows 10 Serial Number! This is not the product key, this is a 14-digit key above the barcode on the license stickers. Usually starts with 033xxxx... Please also enter in what type of license it is (Windows 10 Home, Windows 10 Pro, or Windows 10 Pro Citizenship)
+            </p><p>
+                <input id="WinSerial" name="WinSerial">
+            </p>
+
+            <p>
+                <label for="OS">
+                    Operating System: 
+                </label>
+            </p><p>
+                <select id="OS" name="OS" required>
+                    <option value="Ubuntu">Ubuntu</option>
+                    <option value="LinuxMint">Linux Mint </option>
+                    <option value="OtherLinux">Other Linux</option>
+                    <option value="Windows10"> Windows 10</option>
+                    <option value="Windows11"> Windows 11</option>
+                    <option vlaue="ChromeOS">ChromeOS </option>
+                    <option value="None"> None </option>
+                </select>
+            </p>
+            <input type="submit" value="Submit the form">
+            <input type="reset" value="Clear Form">
+        </form>
+        </div>
+    </body>
+</html>
